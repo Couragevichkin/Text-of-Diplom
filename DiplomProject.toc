@@ -1,2 +1,3 @@
 \babel@toc {russian}{}\relax 
 \contentsline {chapter}{\numberline {1}Введение}{2}{}%
+\contentsline {chapter}{Список используемой литературы}{4}{}%

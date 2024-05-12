@@ -2,7 +2,7 @@
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}%включаем свою кодировку: koi8-r или utf8 в UNIX, cp1251 в Windows
 \usepackage[english,russian]{babel}%используем русский и английский языки с переносами
-\usepackage{amssymb,amsfonts,amsmath,mathtext,cite,enumerate,float} %подключаем нужные пакеты расширений
+\usepackage{amssymb,amsfonts,amsmath,mathtext,cite,enumerate,float,caption} %подключаем нужные пакеты расширений
 \usepackage[dvips]{graphicx} %хотим вставлять в диплом рисунки?
 \graphicspath{{images/}}%путь к рисункам
 
@@ -18,6 +18,8 @@
 
 \setlength{\parindent}{1cm} % настройка красной строки
 
+\captionsetup[table]{singlelinecheck=false,justification=raggedleft} %выравнивание по правому краю заголовков таблиц
+
 \renewcommand{\theenumi}{\arabic{enumi}}% Меняем везде перечисления на цифра.цифра
 \renewcommand{\labelenumi}{\arabic{enumi}}% Меняем везде перечисления на цифра.цифра
 \renewcommand{\theenumii}{.\arabic{enumii}}% Меняем везде перечисления на цифра.цифра
@@ -25,9 +27,10 @@
 \renewcommand{\theenumiii}{.\arabic{enumiii}}% Меняем везде перечисления на цифра.цифра
 \renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.}% Меняем везде перечисления на цифра.цифра
 
+
 \begin{document}
 \input{DiplomProject-Title}% это титульный лист
 \tableofcontents % это оглавление, которое генерируется автоматически
 \input{DiplomProject-Input}% введение
-
+\input{DiplomProject-Bibliographity.tex} % ссылки на литературу
 \end{document}
