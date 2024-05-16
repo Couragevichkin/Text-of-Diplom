@@ -5,6 +5,7 @@
 \usepackage{amssymb,amsfonts,amsmath,mathtext,cite,enumerate,float,caption} %подключаем нужные пакеты расширений
 \usepackage[pdftex]{graphicx} %хотим вставлять в диплом рисунки?
 \graphicspath{{images/}}%путь к рисункам
+\usepackage[labelsep=period]{caption} %точка в подписях
 
 \makeatletter
 \renewcommand{\@biblabel}[1]{#1.} % Заменяем библиографию с квадратных скобок на точку:
@@ -26,12 +27,14 @@
 \renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}.}% Меняем везде перечисления на цифра.цифра
 \renewcommand{\theenumiii}{.\arabic{enumiii}}% Меняем везде перечисления на цифра.цифра
 \renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.}% Меняем везде перечисления на цифра.цифра
-
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
 
 \begin{document}
 \input{DiplomProject-Title}%титульный лист
 \tableofcontents %оглавление, которое генерируется автоматически
 \input{DiplomProject-Input}% введение
-\input{DiplomProject-PrincipleOfWork.tex} % описание принципа работы устройства
+\input{DiplomProject-PrincipleOfWork.tex} % описание структуры устройства
+\input{DiplomProject-DescriptionOfWorkPower.tex} % описание принципа работы устройства
 \input{DiplomProject-Bibliographity} % ссылки на литературу
 \end{document}
