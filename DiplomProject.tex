@@ -27,14 +27,16 @@
 \renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}.}% Меняем везде перечисления на цифра.цифра
 \renewcommand{\theenumiii}{.\arabic{enumiii}}% Меняем везде перечисления на цифра.цифра
 \renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.}% Меняем везде перечисления на цифра.цифра
-\renewcommand{\thefigure}{\thesection.\arabic{figure}}
-\renewcommand{\thetable}{\thesection.\arabic{table}}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}} % меням вид нумерации рисунков 
+\renewcommand{\thetable}{\thesection.\arabic{table}} % меням вид нумерации таблиц
+\renewcommand{\labelenumi}{\arabic{enumi}.} % меняем вид нумерованных списков
 
 \begin{document}
 \input{DiplomProject-Title}%титульный лист
 \tableofcontents %оглавление, которое генерируется автоматически
 \input{DiplomProject-Input}% введение
 \input{DiplomProject-PrincipleOfWork.tex} % описание структуры устройства
-\input{DiplomProject-DescriptionOfWorkPower.tex} % описание принципа работы устройства
+\input{DiplomProject-DescriptionOfWorkPower.tex} % описание принципа работы системы питания
+\input{DiplomProject-DescriptionOfWorkMeas.tex} % описание принципа работы измерительной части
 \input{DiplomProject-Bibliographity} % ссылки на литературу
 \end{document}
