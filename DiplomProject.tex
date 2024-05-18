@@ -2,11 +2,13 @@
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}%включаем свою кодировку: koi8-r или utf8 в UNIX, cp1251 в Windows
 \usepackage[english,russian]{babel}%используем русский и английский языки с переносами
-\usepackage{amssymb,amsfonts,amsmath,mathtext,cite,enumerate,float,caption} %подключаем нужные пакеты расширений
+\usepackage{amssymb,amsfonts,amsmath,cite,enumerate,float,caption} %подключаем нужные пакеты расширений
 \usepackage[pdftex]{graphicx} %хотим вставлять в диплом рисунки?
 \graphicspath{{images/}}%путь к рисункам
 \usepackage[labelsep=period]{caption} %точка в подписях
-
+\usepackage[
+  locale = DE % comma as decimal mark
+]{siunitx}
 \makeatletter
 \renewcommand{\@biblabel}[1]{#1.} % Заменяем библиографию с квадратных скобок на точку:
 \makeatother
@@ -30,6 +32,7 @@
 \renewcommand{\thefigure}{\thesection.\arabic{figure}} % меням вид нумерации рисунков 
 \renewcommand{\thetable}{\thesection.\arabic{table}} % меням вид нумерации таблиц
 \renewcommand{\labelenumi}{\arabic{enumi}.} % меняем вид нумерованных списков
+%\renewcommand{\equation}{\arabic{enumi}.} % меняем вид нумерации формул
 
 \begin{document}
 \input{DiplomProject-Title}%титульный лист
