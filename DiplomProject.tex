@@ -18,7 +18,7 @@
 \usepackage{color} %цвет таблиц
 \usepackage{colortbl} %цвет таблиц
 \usepackage{bigstrut} %для таблиц
-\usepackage{rotating}
+\usepackage{rotating} %поворот таблиц (вырезано)
 
 
 \usepackage[strict]{changepage} %для смены границ полей
@@ -46,11 +46,15 @@
 
 \begin{document}
 \input{DiplomProject-Title}%титульный лист
+\input{DiplomProject-Annotation.tex} % Аннотация
+\input{DiplomProject-Abstract.tex} % Абстракт
 \tableofcontents %оглавление, которое генерируется автоматически
 \input{DiplomProject-Input}% введение
 \input{DiplomProject-PrincipleOfWork.tex} % описание структуры устройства
 \input{DiplomProject-DescriptionOfWorkPower.tex} % описание принципа работы системы питания
 \input{DiplomProject-DescriptionOfWorkMeas.tex} % описание принципа работы измерительной части
 \input{DiplomProject-SubsystemEthernet.tex} % описание принципа работы подсистемы Ethernet
+\input{DiplomProject-PO.tex} % Описание ПО
+\input{DiplomProject-FINAL.tex} % Заключение
 \input{DiplomProject-Bibliographity} % ссылки на литературу
 \end{document}
