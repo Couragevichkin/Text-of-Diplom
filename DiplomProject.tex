@@ -1,5 +1,5 @@
 \documentclass[a4paper,12pt]{report} %размер бумаги устанавливаем А4, шрифт 14пунктов
-\usepackage[T2A]{fontenc}
+\usepackage{cmap}
 \usepackage[utf8]{inputenc}%включаем свою кодировку: koi8-r или utf8 в UNIX, cp1251 в Windows
 \usepackage[english,russian]{babel}%используем русский и английский языки с переносами
 \usepackage{amssymb,amsfonts,amsmath,cite,enumerate,float,caption} %подключаем нужные пакеты расширений
@@ -20,6 +20,7 @@
 \usepackage{bigstrut} %для таблиц
 \usepackage{rotating} %поворот таблиц (вырезано)
 
+\usepackage{pdfpages} % для вставки pdf страниц в документ
 
 \usepackage[strict]{changepage} %для смены границ полей
 
@@ -45,7 +46,8 @@
 %\renewcommand{\equation}{\arabic{enumi}.} % меняем вид нумерации формул
 
 \begin{document}
-\input{DiplomProject-Title}%титульный лист
+\includepdf[]{Title} % Титульный лист с подписью
+\includepdf[]{Tasks for Diplom} % Задание на диплом
 \input{DiplomProject-Annotation.tex} % Аннотация
 \input{DiplomProject-Abstract.tex} % Абстракт
 \tableofcontents %оглавление, которое генерируется автоматически
@@ -57,4 +59,5 @@
 \input{DiplomProject-PO.tex} % Описание ПО
 \input{DiplomProject-FINAL.tex} % Заключение
 \input{DiplomProject-Bibliographity} % ссылки на литературу
+\input{Additional A.tex} % приложение А
 \end{document}
